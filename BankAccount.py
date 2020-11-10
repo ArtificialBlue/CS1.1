@@ -5,17 +5,31 @@ class BankAccount:
         self.routing_number = routing_number
         self.balance = balance
 
-    def deposit(amount):
-        pass
+    def deposit(self,amount):
+        self.balance += amount
+        print(f"Amount Deposited: ${amount}")
 
-    def withdraw(amount):
-        pass
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            print(f"Amount Withdrawn: ${amount}")
+        else:
+            print("Insufficient funds.")
+            self.balance -= 10
 
-    def get_balance(self):
-        pass
+    def get_balance(self):   
+        print(f"Your current balance is: ${self.balance}")
+        return self.balance
 
     def add_interest(self):
-        pass
+        interest = self.balance * 0.00083
+        self.balance += interest
+
 
     def print_receipt(self):
-        pass
+        print(self.full_name)
+        print("Account No.: ****" + self.account_number[4:])
+        print("Routing No.: " + self.routing_number)
+        print("Balance: $" + self.balance)
+
+
