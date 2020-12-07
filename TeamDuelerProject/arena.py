@@ -85,7 +85,7 @@ class Arena:
         if hero_names == "":
             print("No heroes survived :/")
         else:
-            print("The following heroes survived:")
+            print("These heroes survived:")
             print(hero_names)
 
     def show_stats(self):
